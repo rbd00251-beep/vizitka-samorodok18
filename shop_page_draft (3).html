@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Самородок 18 — украшения из натуральных камней ручной работы</title>
+<style>
+  :root {
+    --bg: #faf8f5;
+    --card: #ffffff;
+    --text: #2f2a26;
+    --muted: #7a726a;
+    --accent: #c96f4a;
+    --accent-soft: #f3e3da;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 24px 20px 48px; }
+
+  header { text-align: center; padding: 40px 0 8px; }
+  .logo {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: var(--accent-soft);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 34px;
+  }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: 2px; }
+  .tagline { color: var(--muted); font-style: italic; margin-top: 6px; font-size: 17px; }
+
+  section { margin-top: 36px; }
+  h2 {
+    font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px; text-align: center;
+  }
+  .card {
+    background: var(--card); border-radius: 14px; padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(60,45,30,.06);
+  }
+  .card p { margin-bottom: 12px; }
+  .card p:last-child { margin-bottom: 0; }
+
+  ul.goods { list-style: none; }
+  ul.goods li {
+    padding: 8px 0 8px 26px; position: relative;
+    border-bottom: 1px dashed #e8e0d8;
+  }
+  ul.goods li:last-child { border-bottom: none; }
+  ul.goods li::before { content: "◆"; color: var(--accent); position: absolute; left: 4px; font-size: 11px; top: 12px; }
+
+  /* Ссылки на соцсети и мессенджеры */
+  .links { display: flex; flex-direction: column; gap: 12px; }
+  a.link {
+    display: block; text-decoration: none; color: inherit;
+    background: var(--card); border-radius: 14px; padding: 16px 20px;
+    box-shadow: 0 2px 10px rgba(60,45,30,.06);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  a.link:hover { transform: translateY(-2px); box-shadow: 0 5px 16px rgba(60,45,30,.12); }
+  a.link .name { font-weight: 700; font-size: 17px; }
+  a.link .name span { color: var(--accent); }
+  a.link .note { color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+  footer {
+    margin-top: 48px; text-align: center; color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <!-- Позже можно поставить свой логотип или фото (файл logo.png рядом с index.html) -->
+    <div class="logo">🪨</div>
+    <h1>САМОРОДОК 18</h1>
+    <p class="tagline">Энергия природы на вашей стороне</p>
+  </header>
+
+  <section>
+    <h2>О магазине</h2>
+    <div class="card">
+      <p>Самородок — это находка, у которой нет второй такой же. Так и работают наши украшения: из натуральных камней ручной работы, из Удмуртии — регион 18 на карте, 18 в нашем имени.</p>
+      <p>Уже 6 лет мы собираем украшения, в которых каждый камень настоящий: он проходит путь от рудника или месторождения до вашего украшения.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Товары</h2>
+    <div class="card">
+      <ul class="goods">
+        <li>Браслеты из натуральных камней</li>
+        <li>Чётки</li>
+        <li>Чокеры</li>
+        <li>Индивидуальный подбор камня по запросу — с учётом энергетической совместимости</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Миссия</h2>
+    <div class="card">
+      <p>Мы считаем, что стильный и индивидуальный аксессуар, а также доступ к силе природы — не роскошь, а то, что может быть у каждого.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Свяжитесь с нами</h2>
+    <div class="links">
+      <a class="link" href="https://t.me/samorodok18">
+        <div class="name">Telegram <span>→</span></div>
+        <div class="note">Самый быстрый способ: ответим на вопросы о товаре</div>
+      </a>
+      <a class="link" href="https://vk.ru/samorodok18">
+        <div class="name">ВКонтакте <span>→</span></div>
+        <div class="note">Фото товаров, отзывы покупателей и новинки</div>
+      </a>
+      <a class="link" href="https://max.ru/channel_samorodok18">
+        <div class="name">MAX <span>→</span></div>
+        <div class="note">Наш канал: новинки и общение с нами</div>
+      </a>
+      <a class="link" href="https://ozon.ru/s/samorodok18">
+        <div class="name">Наш магазин на Ozon <span>→</span></div>
+        <div class="note">Каталог с ценами, доставкой и отзывами</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    Самородок 18 · украшения из натуральных камней ручной работы · Удмуртия
+  </footer>
+
+</div>
+</body>
+</html>
