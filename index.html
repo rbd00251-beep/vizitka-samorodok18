@@ -112,11 +112,11 @@
   <section>
     <h2>Свяжитесь с нами</h2>
     <div class="links">
-      <a class="link" href="https://t.me/samorodok18">
+      <a class="link" href="https://t.me/samorodok18" data-app="telegram">
         <div class="name">Telegram <span>→</span></div>
         <div class="note">Самый быстрый способ: ответим на вопросы о товаре</div>
       </a>
-      <a class="link" href="https://vk.ru/samorodok18">
+      <a class="link" href="https://vk.ru/samorodok18" data-app="vk">
         <div class="name">ВКонтакте <span>→</span></div>
         <div class="note">Фото товаров, отзывы покупателей и новинки</div>
       </a>
@@ -136,5 +136,21 @@
   </footer>
 
 </div>
+<script>
+/* Умные ссылки: на Android кнопки Telegram и VK открывают приложение напрямую.
+   Если приложения нет — браузер сам покажет обычную веб-страницу (fallback).
+   На iOS и компьютерах ссылки работают как раньше. */
+(function () {
+  if (!/android/i.test(navigator.userAgent)) return;
+  var upgrades = [
+    ['telegram', 'intent://resolve?domain=samorodok18#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ft.me%2Fsamorodok18;end'],
+    ['vk', 'intent://vk.com/samorodok18#Intent;scheme=vk;package=com.vkontakte.android;S.browser_fallback_url=https%3A%2F%2Fvk.ru%2Fsamorodok18;end']
+  ];
+  upgrades.forEach(function (item) {
+    var a = document.querySelector('a[data-app="' + item[0] + '"]');
+    if (a) a.setAttribute('href', item[1]);
+  });
+})();
+</script>
 </body>
 </html>
