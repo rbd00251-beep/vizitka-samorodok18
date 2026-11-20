@@ -10,7 +10,7 @@
     --card: #ffffff;
     --text: #2f2a26;
     --muted: #7a726a;
-    --accent: #c96f4a;
+    --accent: #b07d10; /* фирменный жёлтый бренда #F5B516, затемнённый для читаемости на светлом фоне */
     --accent-soft: #f3e3da;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,12 +23,14 @@
   .wrap { max-width: 640px; margin: 0 auto; padding: 24px 20px 48px; }
 
   header { text-align: center; padding: 40px 0 8px; }
-  .logo {
-    width: 84px; height: 84px; border-radius: 50%;
-    background: var(--accent-soft);
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 16px;
-    font-size: 34px;
+  .banner {
+    width: 100%; max-width: 460px; display: block;
+    margin: 0 auto 12px;
+    border-radius: 18px;
+  }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
   }
   h1 { font-size: 28px; font-weight: 700; letter-spacing: 2px; }
   .tagline { color: var(--muted); font-style: italic; margin-top: 6px; font-size: 17px; }
@@ -76,9 +78,8 @@
 <div class="wrap">
 
   <header>
-    <!-- Позже можно поставить свой логотип или фото (файл logo.png рядом с index.html) -->
-    <div class="logo">🪨</div>
-    <h1>САМОРОДОК 18</h1>
+    <h1 class="sr-only">САМОРОДОК 18 — украшения из натуральных камней ручной работы</h1>
+    <img src="banner.png" alt="САМОРОДОК 18 — изделия из натурального камня" class="banner">
     <p class="tagline">Энергия природы на вашей стороне</p>
   </header>
 
